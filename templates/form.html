@@ -1,0 +1,15 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<form id="dynamicForm" method="post" action="{{ url_for('submit_form') }}">
+    <input type="text" name="name" placeholder="Name">
+    <button type="button" id="addInput">Add</button>
+    <br>
+    <div id="dynamicInputs"></div>
+    <br>
+    <button type="submit">Submit</button>
+    <a href="{{ url_for('view_data') }}"><button type="button">View Data</button></a>
+</form>
+
+<script src="{{ url_for('static', filename='scripts/main.js') }}"></script>
+{% endblock %}
